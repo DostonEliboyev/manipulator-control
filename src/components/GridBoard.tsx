@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material"
 import { useEffect, useState } from "react"
-import { Snackbar } from "@mui/material"
+// import { Snackbar } from "@mui/material"
 const GRID_SIZE = 5
 
 type Props = {
@@ -28,8 +28,8 @@ export default function GridBoard({ command, intervalDelay }: Props) {
     const [hasSample, setHasSample] = useState(false)
     const [samples, setSamples] = useState<Cell[][]>([])
     const [history, setHistory] = useState<string[]>([])
-    const [snackbar, setSnackbar] = useState("")
-    const [open, setOpen] = useState(false)
+    // const [snackbar, setSnackbar] = useState("")
+    // const [open, setOpen] = useState(false)
 
     useEffect(() => {
         const grid: Cell[][] = Array.from({ length: GRID_SIZE }, () =>
@@ -128,10 +128,10 @@ export default function GridBoard({ command, intervalDelay }: Props) {
     function addToHistory(entry: string) {
         setHistory(prev => [...prev, `${entry}`])
     }
-    function showSnackbar(msg: string) {
-        setSnackbar(msg)
-        setOpen(true)
-    }
+    // function showSnackbar(msg: string) {
+    //     setSnackbar(msg)
+    //     setOpen(true)
+    // }
 
     // if (copy[y][x].hasSample && !hasSample) {
     //     showSnackbar(`✅ Sample OLINDI (${x}, ${y})`)
@@ -169,12 +169,12 @@ export default function GridBoard({ command, intervalDelay }: Props) {
                     ))}
                 </Box>
             </Box>
-            <Snackbar
+            {/* <Snackbar
                 open={open}
                 autoHideDuration={2000}
                 onClose={() => setOpen(false)}
                 message={snackbar}
-            />
+            /> */}
 
         </div>
 

@@ -39,10 +39,7 @@ const commandSlice = createSlice({
       state.lastOptimizedCommand = action.payload
     },
 
-    replay: (state) => {
-      // Bunday qilib qilishdan ko‘ra, aslida bu funksiyani thunk orqali dispatch qilamiz
-      // Chunki animatsiya va step-by-step bajarilishi kerak bo‘ladi
-    }
+
 
   },
 
